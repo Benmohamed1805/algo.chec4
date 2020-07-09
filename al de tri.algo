@@ -1,0 +1,14 @@
+ALGORITHM 
+VAR
+i,j,key,temp: INTEGER;
+BEGIN
+    FOR i FROM 0 TO tab.length-1 STEP 1  DO
+        key=tab[i]
+        j=i-1
+        WHILE (j>=0 && key<tab[j]) DO
+        swap (tab[j],tab[j+1])
+        tab[j]:=key
+        j--
+        END_WHILE
+    END_FOR
+END
